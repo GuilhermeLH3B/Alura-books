@@ -1,0 +1,80 @@
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Garante que a imagem seja redimensionada proporcionalmente */
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em; /* Adiciona espaçamento interno */
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona leve sombra para destaque */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Espaçamento entre os elementos internos */
+}
+
+.container__imagem {
+    padding: 1em;
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 60vw;
+    background-color: var(--branco);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para o menu suspenso */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Evita elementos escaparem do menu */
+    z-index: 10; /* Garante que o menu fique sobre outros elementos */
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+    padding: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Linha divisória no título */
+    text-align: center;
+}
+
+.lista-menu__item {
+    padding: 1em;
+}
+
+.lista-menu__link {
+    display: block; /* Garante que ocupe toda a largura */
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.lista-menu__link:hover {
+    color: var(--azul); /* Destaque ao passar o mouse */
+}
+
+.container__botao {
+    display: none; /* Oculta o botão de seleção */
+}

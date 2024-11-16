@@ -1,0 +1,52 @@
+.contato {
+    background-color: var(--branco);
+    padding: 1em;
+}
+
+.contato__titulo,
+.contato__texto {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Define cor do texto como gradiente */
+    text-align: center; /* Garante alinhamento central */
+}
+
+.contato__titulo {
+    font-size: 1.125rem; /* Equivalente a 18px */
+    font-weight: 500;
+    margin-bottom: 0.5em; /* Espaçamento inferior */
+    line-height: 1.4; /* Melhor legibilidade */
+}
+
+.contato__texto {
+    font-size: 1rem; /* Ajustado para manter hierarquia visual */
+    font-weight: 300;
+    margin: 1em 0;
+    line-height: 1.5; /* Consistência na legibilidade */
+}
+
+.contato__email {
+    padding: 1em;
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    width: 90%;
+    color: var(--azul);
+    font-size: 1rem; /* Compatível com o restante da seção */
+    outline: none; /* Remove o destaque padrão ao focar */
+    transition: border-color 0.3s ease; /* Animação para interação */
+}
+
+.contato__email:focus {
+    border-color: var(--azul-escuro, #0056b3); /* Cor de foco mais destacada */
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Destaque visual ao focar */
+}
+
+.contato__email::placeholder {
+    font-family: var(--fonte-principal, Arial, sans-serif); /* Fallback adicionado */
+    color: var(--azul);
+    background: url("../img/Email.svg") no-repeat 5%;
+    padding-left: 2em; /* Espaço para o ícone */
+    font-size: 0.875rem; /* Equivalente a 14px */
+    line-height: 1.4; /* Melhor alinhamento */
+}
